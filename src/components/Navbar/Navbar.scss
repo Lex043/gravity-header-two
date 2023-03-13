@@ -1,0 +1,29 @@
+@import "../../styles//breakpoints";
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  font-size: 1.5rem;
+  @include respondMin("desktop") {
+    padding: 2rem 4rem;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .hamburger__bar {
+    width: 40px;
+    height: 3px;
+    margin: 4px 0;
+    display: block;
+    background-color: black;
+  }
+
+  .hamburger__bar:nth-child(2) {
+    width: 20px;
+    float: right;
+  }
+}

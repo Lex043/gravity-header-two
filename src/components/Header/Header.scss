@@ -1,0 +1,82 @@
+@import "../../styles//breakpoints";
+
+header {
+  .header__cont {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include respondMin("desktop") {
+      grid-template-columns: 2fr 1.5fr;
+      padding: 0 10rem;
+    }
+
+    h1 {
+      color: #f96241;
+      text-transform: capitalize;
+      font-size: 2.6rem;
+    }
+
+    p {
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      color: #161616cc;
+    }
+
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex-direction: column;
+      margin-top: 2rem;
+
+      .btn {
+        background-color: blue;
+        color: white;
+        width: 16rem;
+        outline: none;
+        border: 3px solid transparent;
+        font-weight: bold;
+        padding: 1rem 0;
+        letter-spacing: 3px;
+
+        @include respondMin("desktop") {
+          &:hover {
+            background-color: white;
+            color: blue;
+            border: 3px solid blue;
+          }
+        }
+      }
+
+      .btn:nth-child(2) {
+        color: blue;
+        background-color: white;
+        border: 3px solid blue;
+        @include respondMin("desktop") {
+          &:hover {
+            background-color: blue;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .learn__more {
+    text-align: center;
+    text-decoration: underline;
+  }
+  figure {
+    max-width: 100%;
+    margin-top: 2rem;
+    img {
+      width: 100%;
+    }
+
+    @include respondMin("desktop") {
+      margin-top: 5rem;
+      padding: 0 10rem;
+    }
+  }
+}
